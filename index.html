@@ -1,84 +1,391 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
 
 <head>
-   <meta charset="utf-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1">
-   <title>Bootstrap demo</title>
-   <link rel="preconnect" href="https://fonts.googleapis.com">
-   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
-   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
-      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-   <link rel="stylesheet" href="css/style.css">
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <link rel="preconnect" href="https://fonts.googleapis.com" />
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet" />
+   <link rel="stylesheet" href="dist/output.css" />
+   <link rel="stylesheet" href="dist/css/style.css" />
+   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+   <link rel="icon" type="image/x-icon" href="dist/img/favicon.ico" />
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+   <title>MutuFinance | Ant1po1e</title>
 </head>
 
-<body>
+<body class="selection:bg-slate-100 selection:text-navy text-center md:text-left">
+   <!-- Pre-loader -->
+   <div id="preloader">
+      <div id="loader" class="justify-center items-center flex h-screen">
+         <div class="loadingio-spinner-double-ring-yvblxc851k">
+            <div class="ldio-hc1lg81h6f6">
+               <div></div>
+               <div></div>
+               <div>
+                  <div></div>
+               </div>
+               <div>
+                  <div></div>
+               </div>
+            </div>
+         </div>
+         <!-- <div>
+               <h4 class="font-bold uppercase text-white text-md mb-3 text-3xl">Loading</h4>
+         </div> -->
+      </div>
+   </div>
+   <!-- Pre-loader-END -->
+
    <!-- Navbar -->
-   <nav class="navbar navbar-expand-lg bg-body-tertiary p-3 shadow rounded-bottom-3 mb-5r">
-      <div class="container-fluid">
-         <a class="navbar-brand" href="#">MutuFinance</a>
-         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-         </button>
-         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-               <li class="nav-item">
-                  <a class="nav-link" href="#">Features</a>
-               </li>
-               <li class="nav-item">
-                  <a class="nav-link" href="#">Pricing</a>
-               </li>
-               <li class="nav-item">
-                  <a class="nav-link" href="#">Stories</a>
-               </li>
-               <li class="nav-item">
-                  <a class="nav-link" href="#">Plugins</a>
-               </li>
-            </ul>
-            <a class="btn btn-secondary" href="#">My Account</a>
+   <header
+      class="bg-transparent absolute shadow-lg top-0 w-full items-center z-10 border-b-2 border-blue">
+      <div class="container">
+         <div class="flex items-center justify-between relative">
+            <div class="px-4">
+               <a href="#home" class="text-3xl font-black py-3 text-navy inline-block">MutuFinance</a>
+            </div>
+            <div class="flex items-center px-4">
+               <button id="hamburger" name="hamburger" type="button" class="block absolute right-4 lg:hidden">
+                  <span class="hamburger-line origin-top-left"></span>
+                  <span class="hamburger-line"></span>
+                  <span class="hamburger-line origin-bottom-left"></span>
+               </button>
+
+               <nav id="nav-menu"
+                  class="hidden absolute py-5 border border-blue bg-softblue border-none shadow-lg rounded-lg max-w-[250px] w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:shadow-none lg:max-w-full lg:rounded">
+                  <ul class="block lg:flex">
+                     <li class="group">
+                        <a href="#home"
+                           class="text-base font-bold text-navy py-2 mx-5 flex group-hover:text-blue transition duration-300">Home</a>
+                     </li>
+                     <li class="group">
+                        <a href="#about"
+                           class="text-base font-bold text-navy py-2 mx-5 flex group-hover:text-blue transition duration-300">About</a>
+                     </li>
+                     <li class="group">
+                        <a href="#feature"
+                           class="text-base font-bold text-navy py-2 mx-5 flex group-hover:text-blue transition duration-300">Feature</a>
+                     </li>
+                     <li class="group">
+                        <a href="#skill"
+                           class="text-base font-bold text-navy py-2 mx-5 flex group-hover:text-blue transition duration-300">Skill</a>
+                     </li>
+                     <li class="group">
+                        <a href="#contact"
+                           class="text-base font-bold text-navy py-2 mx-5 flex group-hover:text-blue transition duration-300">Contact</a>
+                     </li>
+                     <li class="group">
+                        <a href="dist/pdf/cv.pdf" target="_blank"
+                           class="text-base font-semibold lg:hidden text-navy bg-grey py-3 px-8 ml-12 rounded-full inline-block hover:bg-navy hover:text-softblue hover:scale-110 transition duration-300">Get
+                           Started</a>
+                     </li>
+                  </ul>
+               </nav>
+            </div>
+            <a href="dist/pdf/cv.pdf" target="_blank"
+               class="text-base font-semibold hidden text-navy bg-grey py-3 px-8 rounded-full lg:inline-block hover:bg-navy hover:text-softblue hover:scale-110 transition duration-300">Get
+               Started</a>
          </div>
       </div>
-   </nav>
+   </header>
    <!-- Navbar-END -->
 
-
-   <!-- Jumbotron -->
-   <section class="jumbotron">
+   <!-- Home -->
+   <section id="home" class="pt-20">
       <div class="container">
-         <div class="row">
-            <div class="col-lg-5 copywriting align-self-center">
-               <div class="badge mb-1r">
-                  <img src="img/ic_secure180.svg" class="icon" alt="badge">
-                  <p class="small-copy">We won 180 secure-system award</p>
-               </div>
-               <h1 class="big-header mb-1r">
-                  Secure Way to<br>
-                  <span id="typewriter" class="font-mono font-bold text-primary"></span><span id="cursor"
-                     class="text-primary font-bold">|</span>
+         <div class="flex flex-wrap mb-3 justify-between">
+            <div class="w-full self-center px-4 lg:w-1/2" data-aos="zoom-out" data-aos-once="true">
+               <h1 class="text-base font-semibold text-navy bg-softpurple py-2 px-5 mb-3 rounded-full inline-block">
+                  <img src="dist/img/ic_secure180.svg" class="inline-block mr-2" alt="" />
+                  We won 180 secure-system award
                </h1>
-               <p class="secondary-copy mb-2r">
-                  Lorem ipsum dolor sit amet consectetur.<br>
+               <h2 class="block font-bold text-white text-3xl mb-3 lg:text-4xl">
+                  <span class="block font-extrabold text-navy mt-1 mb-1">Secure Way to</span>
+                  <span id="typewriter" class="font-mono font-bold text-blue"></span><span id="cursor"
+                     class="text-blue font-bold">|</span>
+               </h2>
+               <p class="font-medium text-slate-400 mb-10 leading-relaxed lg:text-lg">
+                  Lorem ipsum dolor sit amet consectetur. <br />
                   adipisicing elit. Illum quis ratione quod?
                </p>
-               <a href="" class="btn btn-primary">Get Started</a>
-               <a href="" class="btn btn-secondary">Read Stories</a>
+               <a href="dist/pdf/cv.pdf" target="_blank"
+                  class="text-base font-semibold text-white bg-blue py-3 px-8 rounded-full inline-block mr-3 hover:bg-softpurple hover:text-navy hover:scale-110 transition duration-300">Get
+                  Started</a>
+               <a href="dist/pdf/cv.pdf" target="_blank"
+                  class="text-base font-semibold text-navy bg-grey py-3 px-8 rounded-full inline-block hover:bg-navy hover:text-softblue hover:scale-110 transition duration-300">Read
+                  Stories</a>
             </div>
-            <div class="col-lg-7">
-               <img src="img/banner_header.png" class="img-fluid" alt="banner">
+            <div class="w-full self-end px-4 justify-center items-center lg:w-1/2" data-aos="zoom-out"
+               data-aos-once="true">
+               <div class="relative mt-10 lg:mt-9 lg:right-0">
+                  <div class="md:float-none lg:ml-24">
+                     <img src="dist/img/banner_header.png" alt="" />
+                  </div>
+               </div>
             </div>
          </div>
       </div>
    </section>
-   <!-- Jumbotron-END -->
+   <!-- Home-END -->
 
+   <span id="about"></span>
+   <hr class="mt-20 mb-20 mx-8 border-t-2 border-blue" />
 
+   <!-- About -->
+   <section id="about">
+      <div class="container" data-aos="fade-up" data-aos-once="true">
+         <div class="w-full px-4">
+            <div class="max-w-xl mx-auto text-center">
+               <h4 class="font-bold text-navy text-xl mb-3 lg:text-2xl">
+                  Trusted by Global Leaders
+               </h4>
+               <p class="font-extrabold text-slate-400 mb-10 leading-relaxed lg:text-lg">
+                  Dolor easy report and transactions growth
+               </p>
+            </div>
+         </div>
+      </div>
+      <div class="carousel mb-10" data-aos="fade-left" data-aos-once="true">
+         <div class="carousel-wrapper">
+            <div class="card-brand">
+               <img src="dist/img/apple.png" class="logo m-auto mt-7" alt="" />
+            </div>
+            <div class="card-brand">
+               <img src="dist/img/google.png" class="logo m-auto mt-7" alt="" />
+            </div>
+            <div class="card-brand">
+               <img src="dist/img/spotify.png" class="logo m-auto mt-7" alt="" />
+            </div>
+            <div class="card-brand">
+               <img src="dist/img/kfc.png" class="logo m-auto mt-7" alt="" />
+            </div>
+            <div class="card-brand">
+               <img src="dist/img/subway.png" class="logo m-auto mt-7" alt="" />
+            </div>
+         </div>
+         <div class="carousel-wrapper">
+            <div class="card-brand">
+               <img src="dist/img/apple.png" class="logo m-auto mt-7" alt="" />
+            </div>
+            <div class="card-brand">
+               <img src="dist/img/google.png" class="logo m-auto mt-7" alt="" />
+            </div>
+            <div class="card-brand">
+               <img src="dist/img/spotify.png" class="logo m-auto mt-7" alt="" />
+            </div>
+            <div class="card-brand">
+               <img src="dist/img/kfc.png" class="logo m-auto mt-7" alt="" />
+            </div>
+            <div class="card-brand">
+               <img src="dist/img/subway.png" class="logo m-auto mt-7" alt="" />
+            </div>
+         </div>
+         <div class="carousel-wrapper">
+            <div class="card-brand">
+               <img src="dist/img/apple.png" class="logo m-auto mt-7" alt="" />
+            </div>
+            <div class="card-brand align-middle justify-center">
+               <img src="dist/img/google.png" class="logo m-auto mt-7" alt="" />
+            </div>
+            <div class="card-brand align-middle justify-center">
+               <img src="dist/img/spotify.png" class="logo m-auto mt-7" alt="" />
+            </div>
+            <div class="card-brand align-middle justify-center">
+               <img src="dist/img/kfc.png" class="logo m-auto mt-7" alt="" />
+            </div>
+            <div class="card-brand align-middle justify-center">
+               <img src="dist/img/subway.png" class="logo m-auto mt-7" alt="" />
+            </div>
+         </div>
+      </div>
 
-   <script src="js/script.js"></script>
-   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
-      crossorigin="anonymous"></script>
+      <div class="carousel-left" data-aos="fade-right" data-aos-once="true">
+         <div class="carousel-wrapper-left">
+            <div class="card-brand">
+               <img src="dist/img/apple.png" class="logo m-auto mt-7" alt="" />
+            </div>
+            <div class="card-brand align-middle justify-center">
+               <img src="dist/img/google.png" class="logo m-auto mt-7" alt="" />
+            </div>
+            <div class="card-brand align-middle justify-center">
+               <img src="dist/img/spotify.png" class="logo m-auto mt-7" alt="" />
+            </div>
+            <div class="card-brand align-middle justify-center">
+               <img src="dist/img/kfc.png" class="logo m-auto mt-7" alt="" />
+            </div>
+            <div class="card-brand align-middle justify-center">
+               <img src="dist/img/subway.png" class="logo m-auto mt-7" alt="" />
+            </div>
+         </div>
+         <div class="carousel-wrapper-left">
+            <div class="card-brand">
+               <img src="dist/img/apple.png" class="logo m-auto mt-7" alt="" />
+            </div>
+            <div class="card-brand align-middle justify-center">
+               <img src="dist/img/google.png" class="logo m-auto mt-7" alt="" />
+            </div>
+            <div class="card-brand align-middle justify-center">
+               <img src="dist/img/spotify.png" class="logo m-auto mt-7" alt="" />
+            </div>
+            <div class="card-brand align-middle justify-center">
+               <img src="dist/img/kfc.png" class="logo m-auto mt-7" alt="" />
+            </div>
+            <div class="card-brand align-middle justify-center">
+               <img src="dist/img/subway.png" class="logo m-auto mt-7" alt="" />
+            </div>
+         </div>
+         <div class="carousel-wrapper-left">
+            <div class="card-brand">
+               <img src="dist/img/apple.png" class="logo m-auto mt-7" alt="" />
+            </div>
+            <div class="card-brand align-middle justify-center">
+               <img src="dist/img/google.png" class="logo m-auto mt-7" alt="" />
+            </div>
+            <div class="card-brand align-middle justify-center">
+               <img src="dist/img/spotify.png" class="logo m-auto mt-7" alt="" />
+            </div>
+            <div class="card-brand align-middle justify-center">
+               <img src="dist/img/kfc.png" class="logo m-auto mt-7" alt="" />
+            </div>
+            <div class="card-brand align-middle justify-center">
+               <img src="dist/img/subway.png" class="logo m-auto mt-7" alt="" />
+            </div>
+         </div>
+      </div>
+   </section>
+   <!-- About-END -->
+
+   <span id="feature"></span>
+   <hr class="mt-20 mb-20 mx-8 border-t-2 border-blue" />
+
+   <!-- Feature -->
+   <section>
+      <div class="container px-4 align-middle">
+         <div class="w-full px-4 flex justify-between">
+            <div class="max-w-xl inline-block">
+               <h4 class="font-bold text-navy text-xl mb-3 lg:text-2xl">
+                  Key Features
+               </h4>
+               <p class="font-extrabold text-slate-400 mb-10 leading-relaxed lg:text-lg">
+                  Reliable system growth companies
+               </p>
+            </div>
+            <div class="max-w-xl inline-block">
+               <a href="dist/pdf/cv.pdf" target="_blank"
+                  class="text-base font-semibold text-navy bg-grey py-3 px-8 rounded-full inline-block hover:bg-navy hover:text-softblue hover:scale-110 transition duration-300">View
+                  All</a>
+            </div>
+         </div>
+
+         <div class="flex flex-wrap mb-3 justify-center">
+            <div class="w-full self-start mx-auto px-4 md:w-1/3 lg:w-1/2" data-aos="zoom-out" data-aos-once="true">
+               <div
+                  class="rounded-xl shadow-lg bg-softblue overflow-hidden hover:scale-105 hover:shadow-navy transition duration-300 mb-10 md:w-80 lg:w-[42rem]">
+                  <div class="px-8 py-4">
+                     <div class="font-bold text-xl mb-2 text-navy">
+                        <img src="dist/img/icon_gfb.png" class="w-10 inline-block mr-2" alt="" />
+                        Good for Business
+                     </div>
+                     <p class="font-medium text-navygrey text-sm text-navy mb-2 leading-relaxed lg:text-base">
+                        Business lorem ipsum meet requirements without
+                        breaking the laws and reducing ipsum tax within a
+                        couple of days. The document will be reported
+                        automatically by.
+                     </p>
+
+                     <a href="#" target="_blank" class="text-base font-semibold text-blue inline-block my-5">Learn
+                        More</a>
+                  </div>
+               </div>
+               <div
+                  class="rounded-xl shadow-lg bg-softblue overflow-hidden hover:scale-105 hover:shadow-navy transition duration-300 mb-10 md:w-80 lg:w-[42rem]">
+                  <div class="px-8 py-4">
+                     <div class="font-bold text-xl mb-2 text-navy">
+                        <img src="dist/img/icon_od.png" class="w-10 inline-block mr-2" alt="" />
+                        Official Documentation
+                     </div>
+                     <p class="font-medium text-navygrey text-sm text-navy mb-2 leading-relaxed lg:text-base">
+                        Business lorem ipsum meet requirements without
+                        breaking the laws and reducing ipsum tax within a
+                        couple of days. The document will be reported
+                        automatically by.
+                     </p>
+
+                     <a href="#" target="_blank" class="text-base font-semibold text-blue inline-block my-5">Learn
+                        More</a>
+                  </div>
+               </div>
+            </div>
+
+            <div class="w-full self-end mx-auto px-4 md:w-1/3 lg:w-1/2" data-aos="zoom-out" data-aos-once="true">
+               <div class="relative mt-10 lg:mt-9 lg:right-0">
+                  <div class="md:float-none lg:ml-24">
+                     <div
+                        class="rounded-xl shadow-lg bg-softblue overflow-hidden hover:scale-105 hover:shadow-navy transition duration-300 mb-10 md:w-80 lg:w-[32rem]">
+                        <div class="px-8 py-4">
+                           <div class="font-bold text-xl mb-2 text-navy">
+                              <img src="dist/img/icon_nc.png" class="w-10 inline-block mr-2" alt="" />
+                              No-Code
+                           </div>
+                           <p class="font-medium text-navygrey text-sm text-navy mb-2 leading-relaxed lg:text-base">
+                              Built for non tech savvy to achieve more
+                              results in the less efforts dolor.
+                           </p>
+                        </div>
+                     </div>
+                     <div
+                        class="rounded-xl shadow-lg bg-softblue overflow-hidden hover:scale-105 hover:shadow-navy transition duration-300 mb-10 md:w-80 lg:w-[32rem]">
+                        <div class="px-8 py-4">
+                           <div class="font-bold text-xl mb-2 text-navy">
+                              <img src="dist/img/icon_gfb.png" class="w-10 inline-block mr-2" alt="" />
+                              Payment
+                           </div>
+                           <p class="font-medium text-navygrey text-sm text-navy mb-2 leading-relaxed lg:text-base">
+                              Built for non tech savvy to achieve more
+                              results in the less efforts dolor.
+                           </p>
+                        </div>
+                     </div>
+                     <div
+                        class="rounded-xl shadow-lg bg-softblue overflow-hidden hover:scale-105 hover:shadow-navy transition duration-300 mb-10 md:w-80 lg:w-[32rem]">
+                        <div class="px-8 py-4">
+                           <div class="font-bold text-xl mb-2 text-navy">
+                              <img src="dist/img/icon_a.png" class="w-10 inline-block mr-2" alt="" />
+                              Analytic
+                           </div>
+                           <p class="font-medium text-navygrey text-sm text-navy mb-2 leading-relaxed lg:text-base">
+                              Built for non tech savvy to achieve more
+                              results in the less efforts dolor.
+                           </p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+   <!-- Feature-END -->
+
+   <hr class="mt-20 mb-20 mx-8 border-t-2 border-blue" />
+
+   <!-- Back-to-Top -->
+   <div class="fixed z-30 bottom-0 right-0 mr-10 mb-10">
+      <a href="#home" id="back2top"
+         class="justify-center items-center opacity-0 text-softblue font-bold text-5xl block bg-blue rounded-full bg-opacity-50 lg:text-7xl md:text-6xl ease-in animate-bounce transition-opacity duration-300">
+         <span><i class="bi bi-arrow-up-circle"></i></span>
+      </a>
+   </div>
+   <!-- Back-to-Top-END -->
+
+   <script src="dist/js/script.js"></script>
+
+   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+   <script>
+      AOS.init();
+   </script>
 </body>
 
 </html>
