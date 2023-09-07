@@ -15,7 +15,8 @@
    <title>MutuFinance | Ant1po1e</title>
 </head>
 
-<body class="selection:bg-slate-100 selection:text-navy scrollbar-thin scrollbar-track-softpurple scrollbar-thumb-blue text-center md:text-left">
+<body
+   class="selection:bg-slate-100 selection:text-navy scrollbar-thin scrollbar-track-softpurple scrollbar-thumb-blue text-center md:text-left">
    <!-- Pre-loader -->
    <div id="preloader">
       <div id="loader" class="justify-center items-center flex h-screen">
@@ -130,7 +131,7 @@
    <hr class="mt-20 mb-20 mx-8 border-t-2 border-blue" />
 
    <!-- About -->
-   <section id="about">
+   <section>
       <div class="container" data-aos="fade-up" data-aos-once="true">
          <div class="w-full px-4">
             <div class="max-w-xl mx-auto text-center">
@@ -365,7 +366,104 @@
    </section>
    <!-- Feature-END -->
 
+   <span id="contact"></span>
    <hr class="mt-20 mb-20 mx-8 border-t-2 border-blue" />
+
+   <!-- Contact -->
+   <section>
+      <div class="container" data-aos="fade-up" data-aos-once="true">
+         <div class="w-full px-4">
+            <div class="max-w-xl mx-auto text-center">
+               <h4 class="font-bold text-navy text-xl mb-3 lg:text-2xl">
+                  Book a Demo
+               </h4>
+               <p class="font-extrabold text-slate-400 mb-10 leading-relaxed lg:text-lg">
+                  We will show you how it can help business
+               </p>
+            </div>
+         </div>
+
+         <div class="flex flex-wrap mb-3 justify-between">
+            <div class="w-full self-end px-4 justify-center items-center lg:w-1/2" data-aos="zoom-out"
+               data-aos-once="true">
+               <div class="relative mt-10 lg:mt-9 lg:right-0">
+                  <div class="md:float-none lg:ml-24">
+                     <img src="dist/img/contact_img.png" alt="" />
+                  </div>
+               </div>
+            </div>
+            <div class="w-full self-center px-4 lg:w-1/2" data-aos="zoom-out" data-aos-once="true">
+               <form name="Ant1po1e-contact-form">
+                  <div class="w-full lg:w-3/4 lg:mx-auto">
+                     <div class="w-full px-4 mb-8" data-aos="zoom-in" data-aos-once="true">
+                        <label for="name" class="text-base font-bold text-navy">Name</label>
+                        <input type="text" id="name" name="name"
+                           class="w-full bg-softblue text-navy p-3 rounded-xl focus:outline-none focus:ring-navy focus:ring-1 focus:border-navy"
+                           placeholder="ex: Antipole" required>
+                     </div>
+                     <div class="w-full px-4 mb-8" data-aos="zoom-in" data-aos-once="true">
+                        <label for="email" class="text-base font-bold text-navy">Email</label>
+                        <input type="email" id="email" name="email"
+                           class="w-full bg-softblue text-navy p-3 rounded-xl focus:outline-none focus:ring-navy focus:ring-1 focus:border-navy"
+                           placeholder="ex: antipole@example.com" required>
+                     </div>
+                     <div class="w-full px-4 mb-8" data-aos="zoom-in" data-aos-once="true">
+                        <label for="message" class="text-base font-bold text-navy">Message</label>
+                        <textarea type="text" id="message" name="message"
+                           class="w-full bg-softblue text-navy p-3 rounded-xl focus:outline-none focus:ring-navy focus:ring-1 focus:border-navy"
+                           placeholder="Write anything here!" required></textarea>
+                     </div>
+                     <div
+                        class="alert items-center p-4 mb-4 text-sm text-green-800 border border-green-400 rounded-lg bg-emerald-200 bg-opacity-75 hidden"
+                        role="alert">
+                        <svg class="flex-shrink-0 inline w-4 h-4 mr-3" aria-hidden="true"
+                           xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                           <path
+                              d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z" />
+                        </svg>
+                        <div>
+                           <span class="font-bold">Thanks!</span> Your message has been submitted.
+                        </div>
+                     </div>
+                     <div class="text-center mx-auto" data-aos="zoom-out" data-aos-once="true">
+                        <button id="submit" type="submit"
+                           class="text-base font-semibold text-white bg-blue py-3 px-8 rounded-full inline-block mr-3 hover:bg-softpurple hover:text-navy hover:scale-110 transition duration-300">Submit
+                           <span class="success hidden"><i class="bi bi-che hiddenck-lg"></i></span></button>
+                     </div>
+                  </div>
+               </form>
+            </div>
+         </div>
+      </div>
+   </section>
+   <!-- Contact-END -->
+
+   <footer class="bg-darkgrey2 p-12 border-t-2 border-navy">
+      <div class="container">
+         <div class="flex flex-wrap">
+            <div class="text-center w-full px-4 text-navy">
+               <h2 class=" font-semibold text-2xl text-navy mb-2">Have something to ask?</h2>
+               <h3>If you have any question, you can contact us on social media</h3>
+               <div class="pt-2 flex flex-wrap justify-center gap-4 text-xl">
+                  <a href="https://www.instagram.com/_ant1po1e" target="_blank"
+                     class="hover:scale-150 hover:text-blue transition duration-300"><i
+                        class="bi bi-instagram"></i></a>
+                  <a href="https://twitter.com/apolantipole" target="_blank"
+                     class="hover:scale-150 hover:text-blue transition duration-300"><i
+                        class="bi bi-twitter"></i></a>
+                  <a href="#" target="_blank" class="hover:scale-150 hover:text-blue transition duration-300"><i
+                        class="bi bi-linkedin"></i></a>
+                  <a href="https://github.com/ant1po1e" target="_blank"
+                     class="hover:scale-150 hover:text-blue transition duration-300"><i class="bi bi-github"></i></a>
+               </div>
+            </div>
+         </div>
+      </div>
+   </footer>
+   <div class="text-center w-full px-4 py-4 bg-darkgrey2 border-t-2 border-t-navy text-navy">
+      <p>Made with ♥ by <a href="https://github.com/ant1po1e" target="_blank" class="text-blue text-bold">Ant1po1e</a> |
+         Copyright © 2023</p>
+   </div>
 
    <!-- Back-to-Top -->
    <div class="fixed z-30 bottom-0 right-0 mr-10 mb-10">
